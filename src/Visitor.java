@@ -2,9 +2,6 @@ public class Visitor extends Person {
     private String visitorId;
     private String ticketType;
 
-    public Visitor() {
-    }
-
     public Visitor(String name, int age, String address, String visitorId, String ticketType) {
         super(name, age, address);
         this.visitorId = visitorId;
@@ -16,7 +13,7 @@ public class Visitor extends Person {
     }
 
     public void setVisitorId(String visitorId) {
-        this.visitorId = visitorId;
+        this.visitorId = getVisitorId();
     }
 
     public String getTicketType() {
@@ -24,6 +21,6 @@ public class Visitor extends Person {
     }
 
     public void setTicketType(String ticketType) {
-        this.ticketType = ticketType;
+        this.ticketType = getTicketType();
     }
 }
