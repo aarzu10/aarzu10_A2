@@ -10,12 +10,18 @@ public class AssessmentTwo {
     }
 
     private void partSeven() {
+        System.out.println("Running partSeven...");
+        // Additional implementation for part seven
     }
 
     private void partSix() {
+        System.out.println("Running partSix...");
+        // Additional implementation for part six
     }
 
     private void partFive() {
+        System.out.println("Running partFive...");
+        // Additional implementation for part five
     }
 
     public void partThree() {
@@ -25,13 +31,13 @@ public class AssessmentTwo {
 
         Visitor v1 = new Visitor("Alice", 25, "456 Elm St", "V001", "Day Pass");
         Visitor v2 = new Visitor("Bob", 28, "789 Pine St", "V002", "Day Pass");
-        // Visitor v3 = new Visitor("Charlie", 22, "321 Oak St", "V003", "Day Pass");
+        Visitor v3 = new Visitor("Charlie", 22, "321 Oak St", "V003", "Day Pass");
         Visitor v4 = new Visitor("Diana", 27, "654 Maple St", "V004", "Day Pass");
         Visitor v5 = new Visitor("Ethan", 26, "987 Birch St", "V005", "Day Pass");
 
         rollerCoaster.addVisitorToQueue(v1);
         rollerCoaster.addVisitorToQueue(v2);
-        //rollerCoaster.addVisitorToQueue(v3);
+        rollerCoaster.addVisitorToQueue(v3);
         rollerCoaster.addVisitorToQueue(v4);
         rollerCoaster.addVisitorToQueue(v5);
 
@@ -47,13 +53,13 @@ public class AssessmentTwo {
 
         Visitor v1 = new Visitor("Alice", 25, "456 Elm St", "V001", "Day Pass");
         Visitor v2 = new Visitor("Bob", 28, "789 Pine St", "V002", "Day Pass");
-        // Visitor v3 = new Visitor("Charlie", 22, "321 Oak St", "V003", "Day Pass");
+        Visitor v3 = new Visitor("Charlie", 22, "321 Oak St", "V003", "Day Pass");
         Visitor v4 = new Visitor("Diana", 27, "654 Maple St", "V004", "Day Pass");
         Visitor v5 = new Visitor("Ethan", 26, "987 Birch St", "V005", "Day Pass");
 
         rollerCoaster.addVisitorToQueue(v1);
         rollerCoaster.addVisitorToQueue(v2);
-        //rollerCoaster.addVisitorToQueue(v3);
+        rollerCoaster.addVisitorToQueue(v3);
         rollerCoaster.addVisitorToQueue(v4);
         rollerCoaster.addVisitorToQueue(v5);
 
@@ -68,11 +74,57 @@ public class AssessmentTwo {
 
         Visitor v1 = new Visitor("Alice", 25, "456 Elm St", "V001", "Day Pass");
         Visitor v2 = new Visitor("Bob", 28, "789 Pine St", "V002", "Day Pass");
-        //Visitor v3 = new Visitor("Charlie", 22, "321 Oak St", "V003", "Day Pass");
+        Visitor v3 = new Visitor("Charlie", 22, "321 Oak St", "V003", "Day Pass");
         Visitor v4 = new Visitor("Diana", 27, "654 Maple St", "V004", "Day Pass");
         Visitor v5 = new Visitor("Ethan", 26, "987 Birch St", "V005", "Day Pass");
 
         rollerCoaster.addVisitorToQueue(v1);
         rollerCoaster.addVisitorToQueue(v2);
+        rollerCoaster.addVisitorToQueue(v3);
+        rollerCoaster.addVisitorToQueue(v4);
+        rollerCoaster.addVisitorToQueue(v5);
+    }
+
+    public void partFive() {
+        System.out.println("Running partFive...");
+        Employee rideOperator = new Employee("John Doe", 30, "123 Park Lane", "E001", "Operator");
+        Ride rollerCoaster = new Ride("Roller Coaster", "Thrill Ride", rideOperator);
+
+        Visitor v1 = new Visitor("Alice", 25, "456 Elm St", "V001", "Day Pass");
+        Visitor v2 = new Visitor("Bob", 28, "789 Pine St", "V002", "Day Pass");
+
+        rollerCoaster.addVisitorToQueue(v1);
+        rollerCoaster.addVisitorToQueue(v2);
+
+        rollerCoaster.runOneCycle();
+        rollerCoaster.printRideHistory();
+    }
+
+    public void partSix() {
+        System.out.println("Running partSix...");
+        Employee rideOperator = new Employee("John Doe", 30, "123 Park Lane", "E001", "Operator");
+        Ride rollerCoaster = new Ride("Roller Coaster", "Thrill Ride", rideOperator);
+
+        Visitor v1 = new Visitor("Alice", 25, "456 Elm St", "V001", "Day Pass");
+
+        rollerCoaster.addVisitorToQueue(v1);
+
+        rollerCoaster.runOneCycle();
+        rollerCoaster.printRideHistory();
+    }
+
+    public void partSeven() {
+        System.out.println("Running partSeven...");
+        Employee rideOperator = new Employee("John Doe", 30, "123 Park Lane", "E001", "Operator");
+        Ride rollerCoaster = new Ride("Roller Coaster", "Thrill Ride", rideOperator);
+
+        Visitor v1 = new Visitor("Alice", 25, "456 Elm St", "V001", "Day Pass");
+        Visitor v2 = new Visitor("Bob", 28, "789 Pine St", "V002", "Day Pass");
+
+        rollerCoaster.addVisitorToQueue(v1);
+        rollerCoaster.addVisitorToQueue(v2);
+
+        rollerCoaster.runOneCycle();
+        rollerCoaster.printRideHistory();
     }
 }

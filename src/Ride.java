@@ -1,22 +1,26 @@
-import java.util.Queue;
-import java.util.LinkedList;
+import java.util.*;
 
-public class Ride {
+public class Ride implements RideInterface {
     private String rideName;
     private String rideType;
     private Employee rideOperator;
     private Queue<Visitor> waitingLine;
     private LinkedList<Visitor> rideHistory;
+    private int maxRiders;
+    private int numOfCycles;
 
     public Ride() {
+        this.waitingLine = new LinkedList<>();
+        this.rideHistory = new LinkedList<>();
+        this.maxRiders = 2; // Default value for max riders per cycle
+        this.numOfCycles = 0; // Initial number of cycles
     }
 
     public Ride(String rideName, String rideType, Employee rideOperator) {
+        this();
         this.rideName = rideName;
         this.rideType = rideType;
         this.rideOperator = rideOperator;
-        this.waitingLine = new LinkedList<>();
-        this.rideHistory = new LinkedList<>();
     }
 
     public String getRideName() {
@@ -59,11 +63,29 @@ public class Ride {
         this.rideHistory = rideHistory;
     }
 
+    public int getMaxRiders() {
+        return maxRiders;
+    }
+
+    public void setMaxRiders(int maxRiders) {
+        this.maxRiders = maxRiders;
+    }
+
+    public int getNumOfCycles() {
+        return numOfCycles;
+    }
+
+    public void setNumOfCycles(int numOfCycles) {
+        this.numOfCycles = numOfCycles;
+    }
+
+    @Override
     public void addVisitorToQueue(Visitor visitor) {
         waitingLine.add(visitor);
         System.out.println(visitor.getName() + " added to the queue.");
     }
 
+    @Override
     public void removeVisitorFromQueue(Visitor visitor) {
         if (waitingLine.remove(visitor)) {
             System.out.println(visitor.getName() + " removed from the queue.");
@@ -72,6 +94,7 @@ public class Ride {
         }
     }
 
+    @Override
     public void printQueue() {
         System.out.println("Visitors in the queue:");
         for (Visitor visitor : waitingLine) {
@@ -79,8 +102,13 @@ public class Ride {
         }
     }
 
+    @Override
     public void runOneCycle() {
-        int maxRiders = 2; // Example: max 2 visitors per cycle
+        if (rideOperator == null) {
+            System.out.println("No ride operator assigned. Cannot run the ride.");
+            return;
+        }
+
         int count = 0;
         while (!waitingLine.isEmpty() && count < maxRiders) {
             Visitor visitor = waitingLine.poll();
@@ -88,8 +116,10 @@ public class Ride {
             System.out.println(visitor.getName() + " is taking the ride.");
             count++;
         }
+        numOfCycles++;
     }
 
+    @Override
     public void printRideHistory() {
         System.out.println("Visitors who took the ride:");
         for (Visitor visitor : rideHistory) {

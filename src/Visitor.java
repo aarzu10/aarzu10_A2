@@ -13,7 +13,7 @@ public class Visitor extends Person {
     }
 
     public void setVisitorId(String visitorId) {
-        this.visitorId = getVisitorId();
+        this.visitorId = visitorId; // Corrected assignment
     }
 
     public String getTicketType() {
@@ -21,6 +21,6 @@ public class Visitor extends Person {
     }
 
     public void setTicketType(String ticketType) {
-        this.ticketType = getTicketType();
+        this.ticketType = ticketType; // Corrected assignment
     }
 }
