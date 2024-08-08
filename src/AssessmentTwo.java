@@ -87,11 +87,11 @@ public class AssessmentTwo {
 
     public void partSix() {
         System.out.println("Running partSix...");
-        // Implement logic specific to part six
+
     }
 
     public void partSeven() {
         System.out.println("Running partSeven...");
-        // Implement logic specific to part seven
+
     }
 }
