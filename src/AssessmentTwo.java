@@ -9,21 +9,6 @@ public class AssessmentTwo {
         at.partSeven();
     }
 
-    private void partSeven() {
-        System.out.println("Running partSeven...");
-        // Additional implementation for part seven
-    }
-
-    private void partSix() {
-        System.out.println("Running partSix...");
-        // Additional implementation for part six
-    }
-
-    private void partFive() {
-        System.out.println("Running partFive...");
-        // Additional implementation for part five
-    }
-
     public void partThree() {
         System.out.println("Running partThree...");
         Employee rideOperator = new Employee("John Doe", 30, "123 Park Lane", "E001", "Operator");
@@ -102,29 +87,11 @@ public class AssessmentTwo {
 
     public void partSix() {
         System.out.println("Running partSix...");
-        Employee rideOperator = new Employee("John Doe", 30, "123 Park Lane", "E001", "Operator");
-        Ride rollerCoaster = new Ride("Roller Coaster", "Thrill Ride", rideOperator);
-
-        Visitor v1 = new Visitor("Alice", 25, "456 Elm St", "V001", "Day Pass");
-
-        rollerCoaster.addVisitorToQueue(v1);
-
-        rollerCoaster.runOneCycle();
-        rollerCoaster.printRideHistory();
+        // Implement logic specific to part six
     }
 
     public void partSeven() {
         System.out.println("Running partSeven...");
-        Employee rideOperator = new Employee("John Doe", 30, "123 Park Lane", "E001", "Operator");
-        Ride rollerCoaster = new Ride("Roller Coaster", "Thrill Ride", rideOperator);
-
-        Visitor v1 = new Visitor("Alice", 25, "456 Elm St", "V001", "Day Pass");
-        Visitor v2 = new Visitor("Bob", 28, "789 Pine St", "V002", "Day Pass");
-
-        rollerCoaster.addVisitorToQueue(v1);
-        rollerCoaster.addVisitorToQueue(v2);
-
-        rollerCoaster.runOneCycle();
-        rollerCoaster.printRideHistory();
+        // Implement logic specific to part seven
     }
 }
